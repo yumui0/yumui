@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrine's Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="title">Sabrine's Form</h1>
+            <p>Please fill out this form with the required information.
+            </p>
+            <p id="description" class="description text-center">
+                Welcome to my platform :)
+            </p>
+        </header>
+
+        <form id="survey-form" aria-labelledby="description">
+            <div class="form-group">
+                <label id="name-label">Your Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label">Your Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label id="number-label">Your Age <span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+            </div>
+
+            <div class="form-group">
+                <label for="role">Can you describe your current role?</label>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value="">Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="preferNottosay">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Wanna be my friend?</legend>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked> Definitely
+                </label>
+                <label>
+                    <input name="user-recommend" value="maybe" type="radio" class="input-radio"> Maybe
+                </label>
+                <label>
+                    <input name="user-recommend" value="not-sure" type="radio" class="input-radio"> Not sure
+                </label>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="most-like">What do you like to do in your free time?</label>
+                <select id="most-like" name="mostLike" class="form-control" required>
+                    <option disabled selected value="">Select an option</option>
+                    <option value="video games">Video Games</option>
+                    <option value="sport">Sport</option>
+                    <option value="community with new people">Community with New People</option>
+                    <option value="something else">Something Else</option>
+                </select>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>What would you like to see improved? <span class="clue">(check whatever you like)</span></legend>
+                <label>
+                    <input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox"> Front-end Projects
+                </label>
+                <label>
+                    <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox"> Back-end Projects
+                </label>
+                <label>
+                    <input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox"> Data Visualization
+                </label>
+                <label>
+                    <input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox"> Open Source Community
+                </label>
+                <label>
+                    <input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox"> Gitter Help Rooms
+                </label>
+                <label>
+                    <input name="prefer" value="videos" type="checkbox" class="input-checkbox"> Videos
+                </label>
+                <label>
+                    <input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox"> City Meetups
+                </label>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="comments">Want to say something? Go ahead:</label>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="I can see you, friendo..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
